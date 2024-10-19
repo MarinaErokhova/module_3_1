@@ -9,16 +9,17 @@ def count_calls():
 def string_info(string):
     tuple_1 = (len(string), string.upper(), string.lower())
     count_calls()
-    print(tuple_1)
+    return tuple_1
 
 def is_contains(string, list_to_search):
     string = string.casefold()
     list_to_search = [s.casefold() for s in list_to_search]
-    if string in list_to_search:
-        print(True)
-    else:
-        print(False)
     count_calls()
+    if string in list_to_search:
+        return True
+    else:
+        return False
+
 
 print(string_info('Capibara'))
 print(string_info('Armageddon'))
